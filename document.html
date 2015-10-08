@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Taylor Spencer's ePortfolio - Document Viewer</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script type="text/javascript" src="shared/jsplus.js"></script>
+    <script type="text/javascript" src="defines.js"></script>
+    <script type="text/javascript" src="docSize.js"></script>
+    <script type="text/javascript">
+      // Set the title for the page based on which document is loaded
+      document.title = site_title + " - " + document_title;
+    </script>
+  </head>
+  <body onLoad="setDocumentObjectSize()" onResize="setDocumentObjectSize()">
+    <script type="text/javascript">
+      // Include the header and its script (because scripts can't be executed in included files)
+      include("header.inc");
+      include("header.js");
+    </script>
+    <div id="mainContents">
+      <noscript>
+        <div class="errorMsg">As my ePortfolio has been ported from PHP, it makes heavy use of JavaScript.&nbsp; In order to view my ePortfolio, please enable JavaScript.</div>
+      </noscript>
+      <div class="heading"><script type="text/javascript"> document.write(document_title); </script></div>
+      <script type="text/javascript">
+        // If the GET argument was defined, embed the document referenced in the GET argument
+        if (isSet(_GET("url")))
+        {
+                // Print the <object> tag
+                document.write("<object data=\"" + _GET("url") + "\" type=\"" + getMimeType(_GET("url")) + "\" id=\"documentObject\"></object>\n");
+        }
+        else
+        {
+                // If not, print an error message
+                document.write("<div class=\"errorMsg\">This page is designed to display documents, but you seem to have not specified a document.&nbsp; Please click a link to move on.</div>\n");
+        }
+      </script>
+    </div>
+    <script type="text/javascript">
+      // Include the footer from an external file
+      include("footer.inc");
+    </script>
+  </body>
+</html>

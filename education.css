@@ -1,0 +1,64 @@
+/* Import the global stylesheet */
+@import url("style.css");
+
+/* Document styles */
+#mainContents .term
+{
+	padding: 0px 0px 0px 0px;
+	font: 13pt 'LM Roman 10', serif;
+}
+#mainContents .term li
+{
+	display: inline;
+	list-style-type: none;
+}
+#mainContents .term li:before
+{
+	content: "\2014";
+	padding: 0px 10px 0px 10px;
+}
+#mainContents .term li:first-child:before
+{
+	content: "\200B";
+	padding: 0px 0px 0px 0px;
+}
+#mainContents .degree
+{
+	padding: 0px 0px 0px 0px;
+	font: 13pt 'LM Roman 10', serif;
+}
+#mainContents .degree li
+{
+	display: block;
+	list-style-type: none;
+}
+#mainContents .grade
+{
+	padding: 0px 0px 0px 0px;
+	font: 13pt 'LM Roman 10', serif;
+}
+#mainContents .grade li
+{
+	display: inline;
+	list-style-type: none;
+}
+#mainContents .grade li:before
+{
+	content: "\002F";
+	padding: 0px 10px 0px 10px;
+}
+#mainContents .grade li:first-child:before
+{
+	content: "\200B";
+	padding: 0px 0px 0px 0px;
+}
+#mainContents .courses
+{
+	padding: 0px 0px 0px 0px;
+	font: 13pt 'LM Roman 10', serif;
+}
+#mainContents .courses li
+{
+	display: block;
+	list-style-type: none;
+}

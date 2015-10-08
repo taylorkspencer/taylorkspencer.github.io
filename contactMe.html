@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Taylor Spencer's ePortfolio - Contact Me</title>
+    <link rel="stylesheet" type="text/css" href="contactMe.css"/>
+    <script type="text/javascript" src="shared/jsplus.js"></script>
+    <script type="text/javascript" src="defines.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // Include the header and its script (because scripts can't be executed in included files)
+      include("header.inc");
+      include("header.js");
+    </script>
+    <div id="mainContents">
+      <noscript>
+        <div class="errorMsg">As my ePortfolio has been ported from PHP, it makes heavy use of JavaScript.&nbsp; In order to view my ePortfolio, please enable JavaScript.</div>
+      </noscript>
+      <div class="heading"><script type="text/javascript"> document.write(document_title); </script></div>
+      <img src="photo.png" alt="Photo of Me" height="254" width="219" class="mainPhoto"/>
+      <div class="entry">
+        <a name="name"></a>
+        <div class="heading">Name</div>
+        <ul class="name">
+          <li>Taylor K. Spencer</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <a name="email"></a>
+        <div class="heading">Email</div>
+        <ul class="email">
+          <li><img src="shared/email-link.png" alt="Email address protected from spambots" onClick="javascript:location.href='mailto:taylorkspencer@gmail.com'" class="emailLink"/></li>
+        </ul>
+      </div>
+      <div class="entry">
+        <a name="phone"></a>
+        <div class="heading">Phone</div>
+        <ul class="phone">
+          <li><img src="shared/tel-link.png" alt="Phone number protected from spambots" onClick="javascript:location.href='tel:6827386598'" class="telLink"/></li>
+        </ul>
+      </div>
+      <div class="entry">
+        <a name="address"></a>
+        <div class="heading">Address</div>
+        <ul class="address">
+          <li>924 Hillside Drive</li>
+          <li>Copper Canyon, TX 75077</li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+      // Include the footer from an external file
+      include("footer.inc");
+    </script>
+  </body>
+</html>

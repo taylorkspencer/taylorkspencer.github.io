@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="shared/jsplus.js"></script>
+    <script type="text/javascript" src="defines.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // If the GET argument was defined, redirect the user to the external resource referenced in the GET argument
+      if (isSet(_GET("redir")))
+      {
+              // Check if the argument refers to a valid redirect name
+              if (isSet(externRedirs[_GET("redir")]))
+              {
+                      // If so, redirect the user
+                      location.href = externRedirs[_GET("redir")];
+              }
+      }
+    </script>
+    <noscript>As my ePortfolio has been ported from PHP, it makes heavy use of JavaScript.&nbsp; In order to view my ePortfolio, please enable JavaScript.</noscript>
+  </body>
+</html>

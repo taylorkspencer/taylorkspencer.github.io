@@ -1,0 +1,56 @@
+/* Import the global stylesheet */
+@import url("style.css");
+
+/* Document styles */
+#mainContents .name
+{
+	padding: 0px 0px 0px 0px;
+	font: 13pt 'LM Roman 10', serif;
+}
+#mainContents .name li
+{
+	display: inline;
+	list-style-type: none;
+}
+#mainContents .email
+{
+	padding: 0px 0px 0px 0px;
+	font: 13pt 'LM Roman 10', serif;
+}
+#mainContents .email li
+{
+	display: inline;
+	list-style-type: none;
+}
+#mainContents .phone
+{
+	padding: 0px 0px 0px 0px;
+	font: 13pt 'LM Roman 10', serif;
+}
+#mainContents .phone li
+{
+	display: inline;
+	list-style-type: none;
+}
+#mainContents .address
+{
+	padding: 0px 0px 0px 0px;
+	font: 13pt 'LM Roman 10', serif;
+}
+#mainContents .address li
+{
+	display: inline;
+	list-style-type: none;
+}
+#mainContents .emailLink
+{
+	cursor: pointer;
+	border-bottom: 1px solid blue;
+	vertical-align: middle;
+}
+#mainContents .telLink
+{
+	cursor: pointer;
+	border-bottom: 1px solid blue;
+	vertical-align: middle;
+}

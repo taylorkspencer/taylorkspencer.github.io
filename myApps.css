@@ -1,0 +1,47 @@
+/* Import the global stylesheet */
+@import url("style.css");
+
+/* Document styles */
+#mainContents .videos
+{
+	padding: 0px 0px 0px 0px;
+}
+#mainContents .videos li
+{
+	display: inline;
+	list-style-type: none;
+}
+#mainContents .videos li iframe
+{
+	border-style: none;
+	vertical-align: middle;
+}
+#mainContents .banners
+{
+	padding: 0px 0px 0px 0px;
+}
+#mainContents .banners li
+{
+	display: inline;
+	list-style-type: none;
+}
+#mainContents .banners li a img
+{
+	border-style: none;
+	vertical-align: middle;
+}
+#mainContents .links
+{
+	padding: 0px 0px 0px 0px;
+	font: 12pt 'LM Sans 10', sans-serif;
+}
+#mainContents .links li
+{
+	display: inline;
+	list-style-type: none;
+}
+#mainContents .links li a
+{
+	color: blue;
+	text-decoration: underline;
+}
