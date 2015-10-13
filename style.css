@@ -101,7 +101,6 @@
 	font-style: italic;
 }
 
-
 /* Document styles */
 body
 {
@@ -111,6 +110,29 @@ hr
 {
 	border: 1px solid #555753;
 	clear: both;
+}
+.paragraph
+{
+	font: 12pt 'LM Roman 10', serif;
+	text-indent: 30px;
+	line-height: 200%;
+	padding: 12px 0px;
+}
+.code
+{
+	font-family: 'LM Mono 10', monospace;
+}
+.errorMsg
+{
+	font-family: 'LM Roman 10', serif;
+	background: url('shared/alert.png') no-repeat left top;
+	color: red;
+	height: 20px;
+	padding: 0px 0px 0px 20px;
+}
+placeholder
+{
+	opacity: .3;
 }
 /* Styles for the header pane */
 #header
@@ -403,28 +425,4 @@ hr
 	cursor: pointer;
 	border-bottom: 1px solid blue;
 	vertical-align: middle;
-}
-/* Document styles */
-.paragraph
-{
-	font: 12pt 'LM Roman 10', serif;
-	text-indent: 30px;
-	line-height: 200%;
-	padding: 12px 0px;
-}
-.code
-{
-	font-family: 'LM Mono 10', monospace;
-}
-.errorMsg
-{
-	font-family: 'LM Roman 10', serif;
-	background: url('shared/alert.png') no-repeat left top;
-	color: red;
-	height: 20px;
-	padding: 0px 0px 0px 20px;
-}
-placeholder
-{
-	opacity: .3;
 }
