@@ -3,48 +3,42 @@
 @font-face
 {
 	font-family: 'LM Roman 10';
-	src: url('shared/lm-roman10.eot'),
-		url('shared/lm-roman10.woff') format('woff');
+	src: url('shared/lm-roman10.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face
 {
 	font-family: 'LM Roman 10';
-	src: url('shared/lm-roman10-bold.eot'),
-		url('shared/lm-roman10-bold.woff') format('woff');
+	src: url('shared/lm-roman10-bold.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
 }
 @font-face
 {
 	font-family: 'LM Roman 10';
-	src: url('shared/lm-roman10-italic.eot'),
-		url('shared/lm-roman10-italic.woff') format('woff');
+	src: url('shared/lm-roman10-italic.woff') format('woff');
 	font-weight: normal;
 	font-style: italic;
 }
 @font-face
 {
 	font-family: 'LM Roman 10';
-	src: url('shared/lm-roman10-bold-italic.eot'),
-		url('shared/lm-roman10-bold-italic.woff') format('woff');
+	src: url('shared/lm-roman10-bold-italic.woff') format('woff');
 	font-weight: bold;
 	font-style: italic;
 }
 @font-face
 {
 	font-family: 'LM Roman 10 Caps';
-	src: url('shared/lm-roman10-caps.eot'),
-		url('shared/lm-roman10-caps.woff') format('woff');
+	src: url('shared/lm-roman10-caps.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face
 {
 	font-family: 'LM Roman 10 Caps';
-	src: url('shared/lm-roman10-caps-italic.eot'),
-		url('shared/lm-roman10-caps-italic.woff') format('woff');
+	src: url('shared/lm-roman10-caps-italic.woff') format('woff');
 	font-weight: normal;
 	font-style: italic;
 }
@@ -52,32 +46,28 @@
 @font-face
 {
 	font-family: 'LM Sans 10';
-	src: url('shared/lm-sans10.eot'),
-		url('shared/lm-sans10.woff') format('woff');
+	src: url('shared/lm-sans10.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face
 {
 	font-family: 'LM Sans 10';
-	src: url('shared/lm-sans10-bold.eot'),
-		url('shared/lm-sans10-bold.woff') format('woff');
+	src: url('shared/lm-sans10-bold.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
 }
 @font-face
 {
 	font-family: 'LM Sans 10';
-	src: url('shared/lm-sans10-italic.eot'),
-		url('shared/lm-sans10-italic.woff') format('woff');
+	src: url('shared/lm-sans10-italic.woff') format('woff');
 	font-weight: normal;
 	font-style: italic;
 }
 @font-face
 {
 	font-family: 'LM Sans 10';
-	src: url('shared/lm-sans10-bold-italic.eot'),
-		url('shared/lm-sans10-bold-italic.woff') format('woff');
+	src: url('shared/lm-sans10-bold-italic.woff') format('woff');
 	font-weight: bold;
 	font-style: italic;
 }
@@ -85,32 +75,28 @@
 @font-face
 {
 	font-family: 'LM Mono 10';
-	src: url('shared/lm-mono10.eot'),
-		url('shared/lm-mono10.woff') format('woff');
+	src: url('shared/lm-mono10.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face
 {
 	font-family: 'LM Mono 10';
-	src: url('shared/lm-mono10-italic.eot'),
-		url('shared/lm-mono10-italic.woff') format('woff');
+	src: url('shared/lm-mono10-italic.woff') format('woff');
 	font-weight: normal;
 	font-style: italic;
 }
 @font-face
 {
 	font-family: 'LM Mono 10 Caps';
-	src: url('shared/lm-mono10-caps.eot'),
-		url('shared/lm-mono10-caps.woff') format('woff');
+	src: url('shared/lm-mono10-caps.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face
 {
 	font-family: 'LM Mono 10 Caps';
-	src: url('shared/lm-mono10-caps-italic.eot'),
-		url('shared/lm-mono10-caps-italic.woff') format('woff');
+	src: url('shared/lm-mono10-caps-italic.woff') format('woff');
 	font-weight: normal;
 	font-style: italic;
 }
@@ -127,10 +113,10 @@ hr
 }
 .paragraph
 {
-	font: 12pt 'LM Roman 10', serif;
+	font: medium 'LM Roman 10', serif;
 	text-indent: 30px;
-	line-height: 200%;
-	padding: 12px 0px;
+	line-height: 150%;
+	margin: 9px 0px;
 }
 .code
 {
@@ -148,6 +134,20 @@ placeholder
 {
 	opacity: .3;
 }
+img
+{
+	max-width: 100%;
+	max-width: calc(100% - 10px);
+	*max-width: expression(document.body.clientWidth-10);
+	height: auto;
+}
+object, iframe
+{
+	max-width: 100%;
+	max-width: calc(100% - 10px);
+	*max-width: expression(document.body.clientWidth-10);
+	height: auto;
+}
 /* Styles for the header pane */
 #header
 {
@@ -163,14 +163,16 @@ placeholder
 #header .primary
 {
 	display: block;
-	font: bold 24pt 'LM Sans 10', sans-serif;
+	font: bold x-large 'LM Sans 10', sans-serif;
 	padding: 8px 0px 4px 4px;
+	width: calc(100% - 85px);
 	float: left;
 	clear: left;
 }
 #header .social
 {
 	padding: 0px 0px 0px 0px;
+	width: 80px;
 	float: right;
 	clear: right;
 }
@@ -188,20 +190,22 @@ placeholder
 #header #links
 {
 	display: block;
-	font: 14pt 'LM Sans 10', sans-serif;
+	font: large 'LM Sans 10', sans-serif;
 	position: relative;
 	float: left;
-	clear: both;
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	width: 100%;
 	background-color: #eeeeec;
+	overflow: auto;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
 }
 #header #links li
 {
-	display: table-cell;
+	display: inline-block;
 	*display: inline;
-	float: left;
 	height: 100%;
 	background-color: #f3f3f3;
 	border: 1px solid #babdb6;
@@ -213,7 +217,7 @@ placeholder
 	color: #000000;
 	text-decoration: none;
 }
-#header #links a:hover
+#header #links a:active
 {
 	text-decoration: underline;
 }
@@ -253,7 +257,7 @@ placeholder
 	color: #000000;
 	text-decoration: none;
 }
-#header #links ul a:hover
+#header #links ul a:active
 {
 	text-decoration: underline;
 }
@@ -262,7 +266,7 @@ placeholder
 	font-weight: bold;
 }
 /* For sub-menus with multiple sections */
-#header #links ul ul
+#links ul ul
 {
 	display: table;
 	*display: block;
@@ -276,7 +280,6 @@ placeholder
 #header #links ul ul li
 {
 	display: table-cell;
-	float: left;
 	clear: both;
 	width: 100%;
 	background-color: #f3f3f3;
@@ -288,16 +291,26 @@ placeholder
 }
 #header #links ul ul a
 {
-	color: black;
+	color: #000000;
 	text-decoration: none;
 }
-#header #links ul ul a:hover
+#header #links ul ul a:active
 {
 	text-decoration: underline;
 }
 #header #links ul ul a.here
 {
 	font-weight: bold;
+}
+/* Styles for forms */
+form input[type=button],[type=submit]
+{
+	display: block;
+	font: medium 'LM Sans 10', sans-serif;
+	margin: 3px 10px 3px 10px;
+	height: 40px;
+	width: calc(100% - 24px);
+	*width: expression(document.body.clientWidth-24);
 }
 /* Styles for the main contents pane */
 #mainContents
@@ -306,18 +319,19 @@ placeholder
 	background-color: #f4f4f4;
 	margin: 6px 0px 6px 0px;
 	padding: 0px 6px 0px 6px;
+	width: 100%;
+	width: calc(100% - 12px);
+	*width: expression(document.body.clientWidth-12);
 }
 #mainContents .mainPhoto
 {
 	background-color: inherit;
-	padding: 0px 0px 10px 10px;
-	float: right;
+	padding: 10px 0px 0px 10px;
 }
 #mainContents .heading
 {
 	display: block;
-	font: 24pt 'LM Sans 10', sans-serif;
-	font-weight: bold;
+	font: bold large 'LM Sans 10', sans-serif;
 	padding: 8px 10px 4px 10px;
 }
 #mainContents .entries
@@ -330,8 +344,7 @@ placeholder
 #mainContents .entries .heading
 {
 	display: block;
-	font: 20pt 'LM Sans 10', sans-serif;
-	font-weight: bold;
+	font: bold large 'LM Sans 10', sans-serif;
 	padding: 5px 5px 0px 5px;
 }
 #mainContents .entry
@@ -359,14 +372,12 @@ placeholder
 #mainContents .entry .heading
 {
 	display: block;
-	font: 18pt 'LM Sans 10', sans-serif;
-	font-weight: bold;
 	padding: 5px 0px 0px 0px;
 }
 #mainContents .entry .subHeading
 {
 	display: block;
-	font: 16pt 'LM Sans 10', sans-serif;
+	font: large 'LM Sans 10', sans-serif;
 	padding: 5px 0px 0px 0px;
 }
 /* Styles for the footer */
@@ -374,15 +385,18 @@ placeholder
 {
 	display: block;
 	clear: both;
-	font: 12pt 'LM Sans 10', sans-serif;
+	font: medium 'LM Sans 10', sans-serif;
 	background-color: #f4f4f4;
 	margin: 6px 0px 6px 0px;
 	padding: 0px 6px 0px 6px;
+	width: 100%;
+	width: calc(100% - 12px);
+	*width: expression(document.body.clientWidth-12);
 }
 #footer .heading
 {
 	display: block;
-	font: 18pt bold 'LM Sans 10', sans-serif;
+	font: bold large 'LM Sans 10', sans-serif;
 	margin: 0px 0px 0px 0px;
 	padding: 5px 0px 0px 0px;
 }
@@ -396,10 +410,10 @@ placeholder
 }
 #footer .address li
 {
-	display: table-cell;
+	display: inline-block;
 	*display: inline;
-	list-style-type: none;
 	padding: 2px 12px 2px 2px;
+	list-style-type: none;
 }
 #footer .links
 {
@@ -429,7 +443,7 @@ placeholder
 }
 #footer .copyNotices ul
 {
-	padding: 0px 0px 0px 10px;
+	padding-left: 10px;
 	font-size: 90%;
 }
 #footer .emailLink

@@ -6,6 +6,21 @@
     <link rel="stylesheet" type="text/css" href="contactMe.css"/>
     <script type="text/javascript" src="shared/jsplus.js"></script>
     <script type="text/javascript" src="defines.js"></script>
+    <script type="text/javascript">
+      // If the site is being viewed on a mobile device, use the mobile stylesheet
+      if (navigator.userAgent.indexOf('Mobi')!=-1)
+      {
+              document.write("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n");
+              document.write("<meta name=\"HandheldFriendly\" content=\"True\"/>\n");
+              document.write("<meta name=\"MobileOptimized\" content=\"320\"/>\n");
+              include("mobile.css");
+      }
+      // If the site is being viewed on a desktop device, use the desktop stylesheet
+      else
+      {
+              include("style.css");
+      }
+    </script>
   </head>
   <body>
     <script type="text/javascript">
