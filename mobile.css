@@ -130,10 +130,6 @@ hr
 	height: 20px;
 	padding: 0px 0px 0px 20px;
 }
-placeholder
-{
-	opacity: .3;
-}
 img
 {
 	max-width: 100%;
@@ -325,6 +321,7 @@ form input[type=button],[type=submit]
 }
 #mainContents .mainPhoto
 {
+	display: block;
 	background-color: inherit;
 	padding: 10px 0px 0px 10px;
 }
