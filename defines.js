@@ -25,7 +25,7 @@ var documents = {"./": "Home",
 		"contactMe.html": "Contact Me"};
 
 // Set the names and paths of external resources to be redirected to
-var externRedirs = {"linkedin": "https://www.linkedin.com/pub/taylor-spencer/b2/1b6/3a0/en",
+var externRedirs = {"linkedin": "https://www.linkedin.com/in/taylorkspencer",
 			"github": "https://github.com/taylorkspencer",
 			"networks_gplay": "https://play.google.com/store/apps/details?id=com.spencers.networks.free",
 			"networks_amazon": "http://www.amazon.com/gp/mas/dl/android?p=com.spencers.networks.free",
