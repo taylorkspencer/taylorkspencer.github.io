@@ -1,0 +1,16 @@
+/* Document styles */
+#mainContents .links
+{
+	padding: 0px 0px 0px 0px;
+	font: 12pt 'LM Sans 10', sans-serif;
+}
+#mainContents .links li
+{
+	display: inline;
+	list-style-type: none;
+}
+#mainContents .links li a
+{
+	color: blue;
+	text-decoration: underline;
+}

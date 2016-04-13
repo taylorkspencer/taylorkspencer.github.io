@@ -155,6 +155,8 @@ hr
 	width: calc(100% - 12px);
 	*width: expression(document.body.clientWidth-12);
 	background-color: #f4f4f4;
+	position: relative;
+	z-index: 50;
 }
 #header .primary
 {
@@ -302,6 +304,8 @@ hr
 	background-color: #f4f4f4;
 	margin: 6px 0px 6px 0px;
 	padding: 0px 6px 0px 6px;
+	position: relative;
+	z-index: 30;
 }
 #mainContents .mainPhoto
 {
@@ -374,6 +378,8 @@ hr
 	background-color: #f4f4f4;
 	margin: 6px 0px 6px 0px;
 	padding: 0px 6px 0px 6px;
+	position: relative;
+	z-index: 30;
 }
 #footer .heading
 {

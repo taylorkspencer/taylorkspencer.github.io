@@ -1,0 +1,53 @@
+/* Document styles */
+/* For the document set list */
+#docSetList
+{
+	display: block;
+	font: 14pt 'LM Sans 10', sans-serif;
+	position: relative;
+	float: left;
+	clear: both;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	width: 100%;
+	background-color: #eeeeec;
+}
+#docSetList li
+{
+	display: table-cell;
+	*display: inline;
+	float: left;
+	height: 100%;
+	background-color: #f3f3f3;
+	border: 1px solid #babdb6;
+	padding: 0px 12px 0px 12px;
+	list-style-type: none;
+}
+#docSetList li a
+{
+	color: #000000;
+	text-decoration: none;
+}
+#docSetList li a:hover
+{
+	text-decoration: underline;
+}
+#docSetList li a.here
+{
+	font-weight: bold;
+}
+/* For the document description */
+#description
+{
+	display: block;
+	background-color: #f4f4f4;
+	margin: 6px 0px 6px 0px;
+	padding: 0px 6px 0px 6px;
+}
+#description p
+{
+	font: 12pt 'LM Roman 10', serif;
+	text-indent: 30px;
+	line-height: 200%;
+	padding: 12px 0px;
+}

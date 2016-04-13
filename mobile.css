@@ -155,6 +155,8 @@ object, iframe
 	width: calc(100% - 12px);
 	*width: expression(document.body.clientWidth-12);
 	background-color: #f4f4f4;
+	position: relative;
+	z-index: 50;
 }
 #header .primary
 {
@@ -318,6 +320,8 @@ form input[type=button],[type=submit]
 	width: 100%;
 	width: calc(100% - 12px);
 	*width: expression(document.body.clientWidth-12);
+	position: relative;
+	z-index: 30;
 }
 #mainContents .mainPhoto
 {
@@ -389,6 +393,8 @@ form input[type=button],[type=submit]
 	width: 100%;
 	width: calc(100% - 12px);
 	*width: expression(document.body.clientWidth-12);
+	position: relative;
+	z-index: 30;
 }
 #footer .heading
 {

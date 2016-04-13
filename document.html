@@ -3,6 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>Taylor Spencer's ePortfolio - Document Viewer</title>
+    <link rel="stylesheet" type="text/css" href="document.css"/>
     <script type="text/javascript" src="shared/jsplus.js"></script>
     <script type="text/javascript" src="defines.js"></script>
     <script type="text/javascript" src="docSize.js"></script>
@@ -41,8 +42,105 @@
       </noscript>
       <div class="heading"><script type="text/javascript"> document.write(document_title); </script></div>
       <script type="text/javascript">
-        // If the GET argument was defined, embed the document referenced in the GET argument
-        if (isSet(_GET("url")))
+        // Get the main contents block to append the document objects to
+        var mainContents = document.getElementById("mainContents");
+        
+        // If a GET argument was defined, check to see which fields are defined
+        if (isSet(_GET("doc")))
+        {
+                // Determine which document will be displayed
+                var docDisplayed;
+                if (isSet(_GET("url")))
+                {
+                        // If the URL argument was defined, set docDisplayed to the URL argument
+                        docDisplayed = _GET("url");
+                }
+                
+                // Declare a variable found to indicate when we've found the list
+                var found = false;
+                // Determine which files are included in the doc set and create a list
+                for (var outerIndex in docSets)
+                {
+                        // For the doc set
+                        if (outerIndex===_GET("doc"))
+                        {
+                                // Set found to true to indicate we've found the list
+                                found = true;
+                        }
+                        // For the list after the doc set
+                        else if ((isArray(docSets[outerIndex]))&&(found))
+                        {
+                                // Create the document set list
+                                var docSetList = document.createElement("ul");
+                                setPropertyValue(docSetList, "id", "docSetList");
+                                
+                                // Print the list of documents in the document set
+                                var innerIndex = 0;
+                                for (var page in docSets[outerIndex])
+                                {
+                                        // If the document is the first document and the URL argument was not
+                                        // defined, set docDisplayed to the URL for the first document
+                                        if ((!isSet(_GET("url")))&&(innerIndex==0))
+                                        {
+                                                docDisplayed = page;
+                                        }
+                                        
+                                        // Create the list item and the link to go in it
+                                        var listItem = document.createElement("li");
+                                        var itemLink = document.createElement("a");
+                                        itemLink.href = "document.html?doc="+_GET("doc")+"&url="+page;
+                                        itemLink.innerHTML = docSets[outerIndex][page];
+                                        
+                                        // If the link is pointing to this page, set its class name to "here"
+                                        if ((itemLink.href===location.href)
+                                                ||(strStartsWith(location.href, itemLink.href+'#'))
+                                                ||(strStartsWith(location.href, itemLink.href+'?')))
+                                        {
+                                                itemLink.className = "here";
+                                        }
+                                        
+                                        // Check if the document being linked to is currently being displayed
+                                        if (page===docDisplayed)
+                                        {
+                                                itemLink.className = "here";
+                                        }
+                                        
+                                        // Put the link inside the list item and place it on the page
+                                        listItem.appendChild(itemLink);
+                                        docSetList.appendChild(listItem);
+                                        
+                                        innerIndex++;
+                                }
+                                
+                                // Once the document set list has been created, add it to the page
+                                mainContents.appendChild(docSetList);
+                                
+                                // Reset found to false so this list isn't replaced with another
+                                found = false;
+                        }
+                }
+                
+                // Create the documentObject element for the page
+                var documentObject = document.createElement("object");
+                setPropertyValue(documentObject, "id", "documentObject");
+                setPropertyValue(documentObject, "data", docDisplayed);
+                setPropertyValue(documentObject, "type", getMimeType(docDisplayed));
+                
+                // Append the documentObject element to the page
+                mainContents.appendChild(documentObject);
+                
+                // Print a description for the document set, if one is defined
+                if (docSets[_GET("doc")]!==document_title)
+                {
+                        var description = document.createElement("div");
+                        setPropertyValue(description, "id", "description");
+                        description.innerHTML = docSets[_GET("doc")];
+                        
+                        mainContents.appendChild(description);
+                }
+        }
+        // If only the URL argument was defined, embed the document referenced in the URL argument
+        else if (isSet(_GET("url")))
         {
                 // If the site is being viewed on a mobile device, redirect to the document referenced in the GET argument
                 if (navigator.userAgent.indexOf('Mobi')!=-1)
@@ -52,13 +150,25 @@
                 // If the site is being viewed on a desktop device, print the <object> tag
                 else
                 {
-                        document.write("<object data=\"" + _GET("url") + "\" type=\"" + getMimeType(_GET("url")) + "\" id=\"documentObject\"></object>\n");
+                        // Create the documentObject element for the page
+                        var documentObject = document.createElement("object");
+                        setPropertyValue(documentObject, "id", "documentObject");
+                        setPropertyValue(documentObject, "data", _GET("url"));
+                        setPropertyValue(documentObject, "type", getMimeType(_GET("url")));
+                        
+                        // Append the documentObject element to the page
+                        mainContents.appendChild(documentObject);
                 }
         }
         else
         {
-                // If not, print an error message
-                document.write("<div class=\"errorMsg\">This page is designed to display documents, but you seem to have not specified a document.&nbsp; Please click a link to move on.</div>\n");
+                // If no arguments were defined, print an error message
+                var errorMsg = document.createElement("div");
+                setPropertyValue(errorMsg, "class", "errorMsg");
+                errorMsg.innerHTML = "This page is designed to display documents, but you seem to have not specified a document.&nbsp; Please click a link to move on.";
+                
+                // Append the errorMsg object to the page
+                mainContents.appendChild(errorMsg);
         }
       </script>
     </div>

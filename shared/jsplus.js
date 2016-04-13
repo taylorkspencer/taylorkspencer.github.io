@@ -442,8 +442,8 @@ function getXMLHttpRequest()
 // Return one of several file types for the file given
 function getFileType(filePath)
 {
-	// Check to make sure the file path is not empty
-	if (filePath!='')
+	// Check to make sure the file path is not empty or undefined
+	if ((isSet(filePath))&&(filePath!=''))
 	{
 		// Return a file type based on the file path's extension
 		// For binary files
@@ -563,12 +563,13 @@ function getFileType(filePath)
 // Return a MIME type for the file at the path given based on its extension
 function getMimeType(filePath)
 {
-	// Check to make sure the file path is not empty
-	if (filePath!='')
+	// Check to make sure the file path is not empty or undefined
+	if ((isSet(filePath))&&(filePath!=''))
 	{
 		// Search extensions based on the type of the file
-		// For binary files
 		var fileType = getFileType(filePath);
+		
+		// For binary files
 		if (fileType=='binary')
 		{
 			// Return a MIME type based on the file path's extension
@@ -735,6 +736,27 @@ function getMimeType(filePath)
 	{
 		// If the file path is empty, return an empty string
 		return '';
+	}
+}
+
+// Determines whether the file given exists on the server
+// Returns true if the file exists, otherwise returns false
+function doesFileExist(fileSrc)
+{
+	// Attempt to fetch the file
+	var fetcher = getXMLHttpRequest();
+	fetcher.open("HEAD", fileSrc, false);
+	fetcher.send();
+	
+	// If the file could be found, return true
+	if (fetcher.status==200)
+	{
+		return true;
+	}
+	// Otherwise, return false
+	else
+	{
+		return false;
 	}
 }
 

@@ -33,8 +33,13 @@ function createLinks(documents, container)
 				sanitizedPage = link;
 			}
 			
-			// If the page is not a HTML file, open it in document.html
-			if (getMimeType(sanitizedPage).indexOf('application/')!=-1)
+			// If the page does not exist (for virtual papers), open it in document.html
+			if (!doesFileExist(sanitizedPage))
+			{
+				sanitizedPage = "document.html?doc="+sanitizedPage;
+			}
+			// If the page is not a HTML file, open it in document.html by URL
+			else if (getMimeType(sanitizedPage).indexOf('application/')!=-1)
 			{
 				sanitizedPage = "document.html?url="+sanitizedPage;
 			}
