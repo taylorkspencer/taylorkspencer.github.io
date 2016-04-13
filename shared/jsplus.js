@@ -775,7 +775,7 @@ function _GET(parameter)
 		
 		var paramEnd = GET_data.match(new RegExp("[\?\&]"+parameter+"=(.+?)(?=\&|\#|$)"));
 		var paramEndPoint = GET_data.indexOf(paramEnd[0])+paramEnd[0].length;
-		var paramData = GET_data.substr(paramStartPoint, (paramEndPoint-paramStartPoint));
+		var paramData = GET_data.substr(paramStartPoint, (paramEndPoint-paramStartPoint));/
 		return paramData;
 	}
 }

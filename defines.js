@@ -107,22 +107,39 @@ var externRedirs = {"linkedin": "https://www.linkedin.com/in/taylorkspencer",
 			"loginassistant_amazon": "http://www.amazon.com/gp/mas/dl/android?p=com.Spencers.LoginAssistant.free"};
 
 // Set document_title equal to the name of the document being loaded
-var page = location.href.substr(location.href.lastIndexOf("/")+1);
+var page = location.href;
+// Strip out any target or GET arguments from the URL
+var sanitizedPage;
+if (page.indexOf('?')!=-1)
+{
+	sanitizedPage = page.substr(0, page.indexOf('?'));
+}
+else if (page.indexOf('#')!=-1)
+{
+	sanitizedPage = page.substr(0, page.indexOf('#'));
+}
+else
+{
+	sanitizedPage = page;
+}
+// Strip out the path before the page
+sanitizedPage = sanitizedPage.substr(sanitizedPage.lastIndexOf("/")+1);
+
 // If document.html is the file, extract either the doc argument,
 // or if that is not defined, the URL argument
-if (page.indexOf("document.html")!=-1)
+if (sanitizedPage.indexOf("document.html")!=-1)
 {
 	if (isSet(_GET("doc")))
 	{
-		page = _GET("doc");
+		sanitizedPage = _GET("doc");
 	}
 	else if (isSet(_GET("url")))
 	{
-		page = _GET("url");
+		sanitizedPage = _GET("url");
 	}
 }
 // Check if the document has a title defined
-var document_title = checkForTitle(documents, page);
+var document_title = checkForTitle(documents, sanitizedPage);
 if (document_title==false)
 {
 	// If a title couldn't be found, set document_title to "No Title"
