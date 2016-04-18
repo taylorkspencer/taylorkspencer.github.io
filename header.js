@@ -2,16 +2,16 @@
 function createLinks(documents, container)
 {
 	// Create the list of links
-	for (var link in documents)
+	for (var page in documents)
 	{
 		// If the link is an array, create a submenu
-		if (isArray(documents[link]))
+		if (isArray(documents[page]))
 		{
 			// Create a new <ul> tag for the submenu
 			var submenu = document.createElement("ul");
 			
 			// Call this function recursively to create a submenu
-			createLinks(documents[link], submenu);
+			createLinks(documents[page], submenu);
 			
 			// Once the submenu is created, add it to the page
 			container.appendChild(submenu);
@@ -19,36 +19,37 @@ function createLinks(documents, container)
 		else
 		{
 			var sanitizedPage;
-			// Create a sanitized page string for mime-type purposes
-			if (link.indexOf('?')!=-1)
+			// Create a sanitized page string for linking and mime-type purposes
+			if (page.indexOf('?')!=-1)
 			{
-				sanitizedPage = link.substr(0, link.indexOf('?'));
+				sanitizedPage = page.substr(0, page.indexOf('?'));
 			}
-			else if (link.indexOf('#')!=-1)
+			else if (page.indexOf('#')!=-1)
 			{
-				sanitizedPage = link.substr(0, link.indexOf('#'));
+				sanitizedPage = page.substr(0, page.indexOf('#'));
 			}
 			else
 			{
-				sanitizedPage = link;
+				sanitizedPage = page;
 			}
 			
-			// If the page does not exist (for virtual papers), open it in document.html
-			if (!doesFileExist(sanitizedPage))
+			// If the page matches the name of a document set (for virtual papers), open it in document.html
+			// Changed because it takes too long to determine if a file exists
+			if (isSet(docSets[sanitizedPage]))
 			{
-				sanitizedPage = "document.html?doc="+sanitizedPage;
+				sanitizedPage = "document.html?doc="+page;
 			}
 			// If the page is not a HTML file, open it in document.html by URL
 			else if (getMimeType(sanitizedPage).indexOf('application/')!=-1)
 			{
-				sanitizedPage = "document.html?url="+sanitizedPage;
+				sanitizedPage = "document.html?url="+page;
 			}
 			
 			// Create the list item and the link to go in it
 			var listItem = document.createElement("li");
 			var itemLink = document.createElement("a");
 			itemLink.href = sanitizedPage;
-			itemLink.innerHTML = documents[link];
+			itemLink.innerHTML = documents[page];
 			
 			// If the link is pointing to this page, set its class name to "here"
 			if ((itemLink.href===location.href)
