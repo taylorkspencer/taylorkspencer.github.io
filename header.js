@@ -44,6 +44,11 @@ function createLinks(documents, container)
 			{
 				sanitizedPage = "document.html?url="+page;
 			}
+			// If the page is an HTML file, replace sanitizedPage with page
+			else
+			{
+				sanitizedPage = page;
+			}
 			
 			// Create the list item and the link to go in it
 			var listItem = document.createElement("li");
