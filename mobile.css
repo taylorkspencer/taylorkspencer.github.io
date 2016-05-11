@@ -1,4 +1,19 @@
 /* Fonts */
+/* Comfortaa */
+@font-face
+{
+	font-family: 'Comfortaa';
+	src: url('shared/comfortaa.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face
+{
+	font-family: 'Comfortaa';
+	src: url('shared/comfortaa-bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
 /* LM Roman 10 */
 @font-face
 {
@@ -118,6 +133,11 @@ hr
 	line-height: 150%;
 	margin: 9px 0px;
 }
+.quote
+{
+	background: url('shared/quote-left.png') top left no-repeat, url('shared/quote-right.png') bottom right no-repeat;
+	padding: 0px 30px 0px 30px;
+}
 .code
 {
 	font-family: 'LM Mono 10', monospace;
@@ -161,7 +181,7 @@ object, iframe
 #header .primary
 {
 	display: block;
-	font: bold x-large 'LM Sans 10', sans-serif;
+	font: bold x-large 'Comfortaa', sans-serif;
 	padding: 8px 0px 4px 4px;
 	width: calc(100% - 85px);
 	float: left;
@@ -332,7 +352,7 @@ form input[type=button],[type=submit]
 #mainContents .heading
 {
 	display: block;
-	font: bold large 'LM Sans 10', sans-serif;
+	font: bold large 'Comfortaa', sans-serif;
 	padding: 8px 10px 4px 10px;
 }
 #mainContents .entries
@@ -345,7 +365,7 @@ form input[type=button],[type=submit]
 #mainContents .entries .heading
 {
 	display: block;
-	font: bold large 'LM Sans 10', sans-serif;
+	font: bold large 'Comfortaa', sans-serif;
 	padding: 5px 5px 0px 5px;
 }
 #mainContents .entry
@@ -358,7 +378,7 @@ form input[type=button],[type=submit]
 {
 	display: block;
 	float: right;
-	font: 12pt 'LM Sans 10', sans-serif;
+	font: 12pt 'Comfortaa', sans-serif;
 }
 #mainContents .entries .headingLink a
 {
@@ -378,8 +398,23 @@ form input[type=button],[type=submit]
 #mainContents .entry .subHeading
 {
 	display: block;
-	font: large 'LM Sans 10', sans-serif;
+	font: large 'Comfortaa', sans-serif;
 	padding: 5px 0px 0px 0px;
+}
+#mainContents .links
+{
+	padding: 0px 0px 0px 0px;
+	font: 12pt 'LM Sans 10', sans-serif;
+}
+#mainContents .links li
+{
+	display: inline;
+	list-style-type: none;
+}
+#mainContents .links li a
+{
+	color: blue;
+	text-decoration: underline;
 }
 /* Styles for the footer */
 #footer
@@ -399,7 +434,7 @@ form input[type=button],[type=submit]
 #footer .heading
 {
 	display: block;
-	font: bold large 'LM Sans 10', sans-serif;
+	font: bold large 'Comfortaa', sans-serif;
 	margin: 0px 0px 0px 0px;
 	padding: 5px 0px 0px 0px;
 }

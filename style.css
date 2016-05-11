@@ -1,50 +1,59 @@
 /* Fonts */
+/* Comfortaa */
+@font-face
+{
+	font-family: 'Comfortaa';
+	src: url('shared/comfortaa.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face
+{
+	font-family: 'Comfortaa';
+	src: url('shared/comfortaa-bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
 /* LM Roman 10 */
 @font-face
 {
 	font-family: 'LM Roman 10';
-	src: url('shared/lm-roman10.eot'),
-		url('shared/lm-roman10.woff') format('woff');
+	src: url('shared/lm-roman10.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face
 {
 	font-family: 'LM Roman 10';
-	src: url('shared/lm-roman10-bold.eot'),
-		url('shared/lm-roman10-bold.woff') format('woff');
+	src: url('shared/lm-roman10-bold.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
 }
 @font-face
 {
 	font-family: 'LM Roman 10';
-	src: url('shared/lm-roman10-italic.eot'),
-		url('shared/lm-roman10-italic.woff') format('woff');
+	src: url('shared/lm-roman10-italic.woff') format('woff');
 	font-weight: normal;
 	font-style: italic;
 }
 @font-face
 {
 	font-family: 'LM Roman 10';
-	src: url('shared/lm-roman10-bold-italic.eot'),
-		url('shared/lm-roman10-bold-italic.woff') format('woff');
+	src: url('shared/lm-roman10-bold-italic.woff') format('woff');
 	font-weight: bold;
 	font-style: italic;
 }
 @font-face
 {
 	font-family: 'LM Roman 10 Caps';
-	src: url('shared/lm-roman10-caps.eot'),
-		url('shared/lm-roman10-caps.woff') format('woff');
+	src: url('shared/lm-roman10-caps.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face
 {
 	font-family: 'LM Roman 10 Caps';
-	src: url('shared/lm-roman10-caps-italic.eot'),
-		url('shared/lm-roman10-caps-italic.woff') format('woff');
+	src: url('shared/lm-roman10-caps-italic.woff') format('woff');
 	font-weight: normal;
 	font-style: italic;
 }
@@ -52,32 +61,28 @@
 @font-face
 {
 	font-family: 'LM Sans 10';
-	src: url('shared/lm-sans10.eot'),
-		url('shared/lm-sans10.woff') format('woff');
+	src: url('shared/lm-sans10.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face
 {
 	font-family: 'LM Sans 10';
-	src: url('shared/lm-sans10-bold.eot'),
-		url('shared/lm-sans10-bold.woff') format('woff');
+	src: url('shared/lm-sans10-bold.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
 }
 @font-face
 {
 	font-family: 'LM Sans 10';
-	src: url('shared/lm-sans10-italic.eot'),
-		url('shared/lm-sans10-italic.woff') format('woff');
+	src: url('shared/lm-sans10-italic.woff') format('woff');
 	font-weight: normal;
 	font-style: italic;
 }
 @font-face
 {
 	font-family: 'LM Sans 10';
-	src: url('shared/lm-sans10-bold-italic.eot'),
-		url('shared/lm-sans10-bold-italic.woff') format('woff');
+	src: url('shared/lm-sans10-bold-italic.woff') format('woff');
 	font-weight: bold;
 	font-style: italic;
 }
@@ -85,32 +90,28 @@
 @font-face
 {
 	font-family: 'LM Mono 10';
-	src: url('shared/lm-mono10.eot'),
-		url('shared/lm-mono10.woff') format('woff');
+	src: url('shared/lm-mono10.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face
 {
 	font-family: 'LM Mono 10';
-	src: url('shared/lm-mono10-italic.eot'),
-		url('shared/lm-mono10-italic.woff') format('woff');
+	src: url('shared/lm-mono10-italic.woff') format('woff');
 	font-weight: normal;
 	font-style: italic;
 }
 @font-face
 {
 	font-family: 'LM Mono 10 Caps';
-	src: url('shared/lm-mono10-caps.eot'),
-		url('shared/lm-mono10-caps.woff') format('woff');
+	src: url('shared/lm-mono10-caps.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face
 {
 	font-family: 'LM Mono 10 Caps';
-	src: url('shared/lm-mono10-caps-italic.eot'),
-		url('shared/lm-mono10-caps-italic.woff') format('woff');
+	src: url('shared/lm-mono10-caps-italic.woff') format('woff');
 	font-weight: normal;
 	font-style: italic;
 }
@@ -131,6 +132,11 @@ hr
 	text-indent: 30px;
 	line-height: 200%;
 	padding: 12px 0px;
+}
+.quote
+{
+	background: url('shared/quote-left.png') top left no-repeat, url('shared/quote-right.png') bottom right no-repeat;
+	padding: 0px 30px 0px 30px;
 }
 .code
 {
@@ -161,7 +167,7 @@ hr
 #header .primary
 {
 	display: block;
-	font: bold 24pt 'LM Sans 10', sans-serif;
+	font: bold 24pt 'Comfortaa', sans-serif;
 	padding: 8px 0px 4px 4px;
 	float: left;
 	clear: left;
@@ -316,7 +322,7 @@ hr
 #mainContents .heading
 {
 	display: block;
-	font: 24pt 'LM Sans 10', sans-serif;
+	font: 24pt 'Comfortaa', sans-serif;
 	font-weight: bold;
 	padding: 8px 10px 4px 10px;
 }
@@ -330,7 +336,7 @@ hr
 #mainContents .entries .heading
 {
 	display: block;
-	font: 20pt 'LM Sans 10', sans-serif;
+	font: 20pt 'Comfortaa', sans-serif;
 	font-weight: bold;
 	padding: 5px 5px 0px 5px;
 }
@@ -344,7 +350,7 @@ hr
 {
 	display: block;
 	float: right;
-	font: 12pt 'LM Sans 10', sans-serif;
+	font: 12pt 'Comfortaa', sans-serif;
 }
 #mainContents .entries .headingLink a
 {
@@ -359,15 +365,30 @@ hr
 #mainContents .entry .heading
 {
 	display: block;
-	font: 18pt 'LM Sans 10', sans-serif;
+	font: 18pt 'Comfortaa', sans-serif;
 	font-weight: bold;
 	padding: 5px 0px 0px 0px;
 }
 #mainContents .entry .subHeading
 {
 	display: block;
-	font: 16pt 'LM Sans 10', sans-serif;
+	font: 16pt 'Comfortaa', sans-serif;
 	padding: 5px 0px 0px 0px;
+}
+#mainContents .links
+{
+	padding: 0px 0px 0px 0px;
+	font: 12pt 'LM Sans 10', sans-serif;
+}
+#mainContents .links li
+{
+	display: inline;
+	list-style-type: none;
+}
+#mainContents .links li a
+{
+	color: blue;
+	text-decoration: underline;
 }
 /* Styles for the footer */
 #footer
@@ -384,7 +405,7 @@ hr
 #footer .heading
 {
 	display: block;
-	font: 18pt bold 'LM Sans 10', sans-serif;
+	font: 18pt bold 'Comfortaa', sans-serif;
 	margin: 0px 0px 0px 0px;
 	padding: 5px 0px 0px 0px;
 }
