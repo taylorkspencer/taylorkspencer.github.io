@@ -374,6 +374,12 @@ form input[type=button],[type=submit]
 	padding: 10px 10px 10px 10px;
 	background-color: #f4f4f4;
 }
+#mainContents .entry .headingClassTitle
+{
+	display: block;
+	float: right;
+	font: 12pt 'Comfortaa', sans-serif;
+}
 #mainContents .entries .headingLink
 {
 	display: block;
