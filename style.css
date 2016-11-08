@@ -133,6 +133,18 @@ hr
 	line-height: 200%;
 	padding: 12px 0px;
 }
+.paragraph ul
+{
+	margin: 0px 0px;
+	padding: 0px 0px;
+	list-style-position: inside;
+}
+.paragraph li
+{
+	text-indent: 0px;
+	margin: 0px 0px 0px 30px;
+	padding: 0px 0px 0px 10px;
+}
 .quote
 {
 	background: url('shared/quote-left.png') top left no-repeat, url('shared/quote-right.png') bottom right no-repeat;

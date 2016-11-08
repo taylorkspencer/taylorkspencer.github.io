@@ -43,8 +43,9 @@ var documents = {"./": "Home",
 				"education.html#NLC": "North Lake College",
 				"education.html#Certifications": "Certifications"},
 		"myApps.html": "My Apps",
-		"myApps.html#": {"myApps.html#AndroidApps": "Android Apps",
-				"myApps.html#AndroidApps#": {"myApps.html#Networks": "Networks",
+		"myApps.html#": {"myApps.html#MobileApps": "Mobile Apps",
+				"myApps.html#MobileApps#": {"myApps.html#FBCLewisvilleApp": "FBC Lewisville App",
+							"myApps.html#Networks": "Networks",
 							"myApps.html#UNTBusFinder": "UNT Bus Finder",
 							"myApps.html#LoginAssistant": "Login Assistant"},
 				"myApps.html#PHPWebApps": "PHP/Web Apps",
@@ -102,10 +103,13 @@ var docSets = {"resume": "Resum\xE9",
 // Set the names and paths of external resources to be redirected to
 var externRedirs = {"linkedin": "https://www.linkedin.com/in/taylorkspencer",
 			"github": "https://github.com/taylorkspencer",
+			"fbclewisvilleapp_itunes": "https://itunes.apple.com/us/app/fbc-lewisville/id1168128641?mt=8",
+  			"fbclewisvilleapp_gplay": "https://play.google.com/store/apps/details?id=org.fbclewisville.app",
+  			"fbclewisvilleapp_amazon": "https://www.amazon.com/gp/mas/dl/android?p=org.fbclewisville.app",
 			"networks_gplay": "https://play.google.com/store/apps/details?id=com.spencers.networks.free",
-			"networks_amazon": "http://www.amazon.com/gp/mas/dl/android?p=com.spencers.networks.free",
+			"networks_amazon": "https://www.amazon.com/gp/mas/dl/android?p=com.spencers.networks.free",
 			"loginassistant_gplay": "https://play.google.com/store/apps/details?id=com.Spencers.LoginAssistant.free",
-			"loginassistant_amazon": "http://www.amazon.com/gp/mas/dl/android?p=com.Spencers.LoginAssistant.free"};
+			"loginassistant_amazon": "https://www.amazon.com/gp/mas/dl/android?p=com.Spencers.LoginAssistant.free"};
 
 // Set document_title equal to the name of the document being loaded
 var page = location.href;
