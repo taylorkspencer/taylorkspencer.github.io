@@ -194,6 +194,7 @@ object, iframe
 {
 	display: block;
 	font: bold x-large 'Comfortaa', sans-serif;
+	margin: 0px;
 	padding: 8px 0px 4px 4px;
 	width: calc(100% - 85px);
 	float: left;
@@ -365,6 +366,7 @@ form input[type=button],[type=submit]
 {
 	display: block;
 	font: bold large 'Comfortaa', sans-serif;
+	margin: 0px;
 	padding: 8px 10px 4px 10px;
 }
 #mainContents .entries
@@ -378,6 +380,7 @@ form input[type=button],[type=submit]
 {
 	display: block;
 	font: bold large 'Comfortaa', sans-serif;
+	margin: 0px;
 	padding: 5px 5px 0px 5px;
 }
 #mainContents .entry
@@ -411,12 +414,14 @@ form input[type=button],[type=submit]
 #mainContents .entry .heading
 {
 	display: block;
+	margin: 0px;
 	padding: 5px 0px 0px 0px;
 }
 #mainContents .entry .subHeading
 {
 	display: block;
 	font: large 'Comfortaa', sans-serif;
+	margin: 0px;
 	padding: 5px 0px 0px 0px;
 }
 #mainContents .links

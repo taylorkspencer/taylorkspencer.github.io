@@ -180,6 +180,7 @@ hr
 {
 	display: block;
 	font: bold 24pt 'Comfortaa', sans-serif;
+	margin: 0px;
 	padding: 8px 0px 4px 4px;
 	float: left;
 	clear: left;
@@ -336,6 +337,7 @@ hr
 	display: block;
 	font: 24pt 'Comfortaa', sans-serif;
 	font-weight: bold;
+	margin: 0px;
 	padding: 8px 10px 4px 10px;
 }
 #mainContents .entries
@@ -350,6 +352,7 @@ hr
 	display: block;
 	font: 20pt 'Comfortaa', sans-serif;
 	font-weight: bold;
+	margin: 0px;
 	padding: 5px 5px 0px 5px;
 }
 #mainContents .entry
@@ -385,12 +388,14 @@ hr
 	display: block;
 	font: 18pt 'Comfortaa', sans-serif;
 	font-weight: bold;
+	margin: 0px;
 	padding: 5px 0px 0px 0px;
 }
 #mainContents .entry .subHeading
 {
 	display: block;
 	font: 16pt 'Comfortaa', sans-serif;
+	margin: 0px;
 	padding: 5px 0px 0px 0px;
 }
 #mainContents .links

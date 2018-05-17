@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>Taylor Spencer's ePortfolio - Document Viewer</title>
+    <title>Document Viewer - Taylor Spencer's ePortfolio</title>
     <link rel="stylesheet" type="text/css" href="document.css"/>
     <script type="text/javascript" src="shared/jsplus.js"></script>
     <script type="text/javascript" src="defines.js"></script>
     <script type="text/javascript" src="docSize.js"></script>
     <script type="text/javascript">
       // Set the title for the page based on which document is loaded
-      document.title = site_title + " - " + document_title;
+      document.title = document_title + " - " + site_title;
       
       // If the site is being viewed on a mobile device, use the mobile stylesheet
       if (navigator.userAgent.indexOf('Mobi')!=-1)
@@ -31,7 +31,7 @@
     </noscript>
   </head>
   <body onLoad="setDocumentObjectSize()" onResize="setDocumentObjectSize()">
-    <script type="text/javascript">
+    <script type="text/javascript" async>
       // Include the header and its script (because scripts can't be executed in included files)
       include("header.inc");
       include("header.js");
@@ -40,7 +40,7 @@
       <noscript>
         <div class="errorMsg">As my ePortfolio has been ported from PHP, it makes heavy use of JavaScript.&nbsp; In order to view my ePortfolio, please enable JavaScript.</div>
       </noscript>
-      <div class="heading"><script type="text/javascript"> document.write(document_title); </script></div>
+      <h1 class="heading"><script type="text/javascript"> document.write(document_title); </script></h1>
       <script type="text/javascript">
         // Get the main contents block to append the document objects to
         var mainContents = document.getElementById("mainContents");
@@ -172,7 +172,7 @@
         }
       </script>
     </div>
-    <script type="text/javascript">
+    <script type="text/javascript" async>
       // Include the footer from an external file
       include("footer.inc");
     </script>
