@@ -101,8 +101,6 @@ var externRedirs = {"linkedin": "https://www.linkedin.com/in/taylorkspencer",
 			"fbclewisvilleapp_itunes": "https://itunes.apple.com/us/app/fbc-lewisville/id1168128641?mt=8",
   			"fbclewisvilleapp_gplay": "https://play.google.com/store/apps/details?id=org.fbclewisville.app",
   			"fbclewisvilleapp_amazon": "https://www.amazon.com/gp/mas/dl/android?p=org.fbclewisville.app",
-			"networks_gplay": "https://play.google.com/store/apps/details?id=com.spencers.networks.free",
-			"networks_amazon": "https://www.amazon.com/gp/mas/dl/android?p=com.spencers.networks.free",
 			"loginassistant_gplay": "https://play.google.com/store/apps/details?id=com.Spencers.LoginAssistant.free",
 			"loginassistant_amazon": "https://www.amazon.com/gp/mas/dl/android?p=com.Spencers.LoginAssistant.free"};
 
