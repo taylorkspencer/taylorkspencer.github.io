@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://taylorkspencer.github.io/sitemap.xml
