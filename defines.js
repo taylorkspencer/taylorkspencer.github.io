@@ -33,8 +33,17 @@ function checkForTitle(docArray, page)
 }
 
 
-// Set site_title equal to the site title
+// Set site_title equal to the site's title
 var site_title = "Taylor Spencer's ePortfolio";
+
+// Set site_tagline equal to the site's tagline
+var site_tagline = "SEO Expert, Web, and Mobile App Developer";
+
+// Set site_GTMCODE equal to the site's GTM code
+define('site_GTMCODE', "GTM-M88SN92");
+
+// Set site_GAID equal to the site's Google Analytics ID
+define('site_GAID', "UA-133764936-1");
 
 // Set the names and paths of the documents used in the site
 var documents = {"./": "Home",
@@ -42,6 +51,9 @@ var documents = {"./": "Home",
 		"education.html#": {"education.html#UNT": "University of North Texas",
 				"education.html#NLC": "North Lake College",
 				"education.html#Certifications": "Certifications"},
+		"experience.html": "Experience",
+		"experience.html#": {"experience.html#TheCrouchGroup": "The Crouch Group",
+				"experience.html#SproutsFarmersMarket": "Sprouts Farmers Market"},
 		"myApps.html": "My Apps",
 		"myApps.html#": {"myApps.html#MobileApps": "Mobile Apps",
 				"myApps.html#MobileApps#": {"myApps.html#FBCLewisvilleApp": "FBC Lewisville App",
