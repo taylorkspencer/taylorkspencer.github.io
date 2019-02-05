@@ -37,7 +37,7 @@ function checkForTitle(docArray, page)
 var site_title = "Taylor Spencer's ePortfolio";
 
 // Set site_tagline equal to the site's tagline
-var site_tagline = "SEO Expert, Web, and Mobile App Developer";
+var site_tagline = "Local SEO Expert, Web, and Mobile App Developer";
 
 // Set site_GTMCODE equal to the site's GTM code
 define('site_GTMCODE', "GTM-M88SN92");
