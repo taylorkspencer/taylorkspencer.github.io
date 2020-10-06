@@ -109,10 +109,7 @@ var docSets = {"the-advent-of-bitcoin": "<p>Bitcoin is a revolutionary invention
 
 // Set the names and paths of external resources to be redirected to
 var externRedirs = {"linkedin": "https://www.linkedin.com/in/taylorkspencer",
-			"github": "https://github.com/taylorkspencer",
-			"fbclewisvilleapp_itunes": "https://itunes.apple.com/us/app/fbc-lewisville/id1168128641?mt=8",
-  			"fbclewisvilleapp_gplay": "https://play.google.com/store/apps/details?id=org.fbclewisville.app",
-  			"fbclewisvilleapp_amazon": "https://www.amazon.com/gp/mas/dl/android?p=org.fbclewisville.app"};
+			"github": "https://github.com/taylorkspencer"};
 
 // Set document_title equal to the name of the document being loaded
 var page = location.href;
